@@ -1,38 +1,141 @@
-.App {
+.site {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #1b1b1b;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.nav {
+  background: #0a2a43;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+.brand {
+  font-weight: 700;
+}
+.menu {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu a { color: #fff; text-decoration: none; }
+.has-sub { position: relative; }
+.submenu {
+  display: none;
+  position: absolute;
+  background: #0f3a59;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  top: 100%;
+  min-width: 220px;
+}
+.submenu li a { display: block; padding: 8px 12px; }
+.has-sub:hover .submenu { display: block; }
+
+/* Mobile nav */
+.nav-toggle { display: none; }
+.hamburger { display: none; cursor: pointer; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; }
+
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  .menu {
+    position: absolute;
+    left: 0; right: 0; top: 56px;
+    background: #0a2a43;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+  .menu li a { padding: 12px 16px; display: block; }
+  .nav-toggle:checked ~ .menu { display: flex; }
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(10,42,67,.6), rgba(10,42,67,.6)), url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+  color: #fff;
+  padding: 96px 16px;
+}
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
+.hero h1 { font-size: 40px; margin: 0 0 8px; }
+.hero p { font-size: 18px; margin: 0 0 16px; opacity: .95; }
+.btn { background: #f6b60b; color: #1b1b1b; padding: 10px 16px; border-radius: 4px; text-decoration: none; font-weight: 600; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Sections */
+.section { padding: 56px 16px; }
+.container { max-width: 1100px; margin: 0 auto; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+.card { background: #f6f8fa; padding: 16px; border-radius: 8px; }
+.card h3 { margin-top: 0; }
+
+@media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .cards { grid-template-columns: 1fr; } }
+
+.campus { background: #0a2a43; color: #fff; }
+.link { color: #0a6ad6; text-decoration: none; font-weight: 600; }
+.link:hover { text-decoration: underline; }
+
+/* News */
+.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.news-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; background: #fff; }
+.news-card .date { display: block; color: #6b7280; font-size: 14px; margin-bottom: 8px; }
+@media (max-width: 900px) { .news-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .news-grid { grid-template-columns: 1fr; } }
+
+/* Footer */
+.footer { background: #0a2a43; color: #fff; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+.footer .list { list-style: none; padding: 0; margin: 0; }
+.footer .list li { margin: 8px 0; }
+.footer .list a { color: #fff; text-decoration: none; }
+.copyright { text-align: center; padding: 12px 16px; background: #082132; margin-top: 24px; }
+
+/* Admission */
+.table-wrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { border: 1px solid #e5e7eb; padding: 12px; text-align: left; }
+.table th { background: #f3f4f6; }
+
+/* Departments Pages */
+.department .dept-hero { margin: 12px 0 16px; }
+.department .dept-hero img { width: 100%; height: 280px; object-fit: cover; border-radius: 8px; display: block; }
+
+/* Logos slider */
+.logos-slider { overflow: hidden; margin: 12px 0 24px; }
+.logos-track { display: flex; gap: 28px; align-items: center; animation: slide-logos 24s linear infinite; }
+.logo-item { flex: 0 0 auto; filter: grayscale(20%); opacity: 0.9; }
+.logo-item img { height: 48px; width: auto; display: block; }
+@keyframes slide-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logos-slider:hover .logos-track { animation-play-state: paused; }
+
+@media (max-width: 640px) {
+  .logos-track { animation-duration: 36s; }
+  .logo-item img { height: 40px; }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Placement officer */
+.officer { display: flex; align-items: center; gap: 16px; margin-top: 12px; }
+.officer img { width: 120px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid #e5e7eb; }
+.officer-details p { margin: 0; }
