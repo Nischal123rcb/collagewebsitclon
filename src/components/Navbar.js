@@ -26,8 +26,8 @@ function Navbar() {
             </ul>
           </li>
           <li><Link to="/placement">Placement</Link></li>
-          <li><a href="#campus">Campus Life</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><Link to="/campus-life">Campus Life</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
     </nav>
