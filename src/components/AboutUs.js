@@ -81,7 +81,7 @@ function AboutUs() {
             margin: '0 0 2rem 2rem',
             borderRadius: '12px',
             boxShadow: '0 4px 24px rgba(0,0,0,0.15)',
-            maxWidth: '250px',
+            maxWidth: '250zzzzpx',
             height: 'auto'
           }}
         />
