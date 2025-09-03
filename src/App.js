@@ -13,6 +13,7 @@ import CSE from './components/departments/CSE';
 import ECE from './components/departments/ECE';
 import Mechanical from './components/departments/Mechanical';
 import Placement from './components/Placement';
+import Gallery from './components/Gallery';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/departments/mechanical" element={<Mechanical />} />
           <Route path="/campus-life" element={<CampusLife />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <Footer />
       </div>

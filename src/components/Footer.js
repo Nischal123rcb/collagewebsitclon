@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Gallery from './Gallery';
 function Footer() {
   return (
     <footer id="contact" className="footer">
@@ -21,7 +21,7 @@ function Footer() {
         <div>
           <h3>Quick Links</h3>
           <ul className="list">
-            <li><a href="#">Photo Gallery</a></li>
+            <li><a href="/gallery">Photo Gallery</a></li>
             <li><a href="#">Student Space</a></li>
             <li><a href="#">AICTE Mandatory Disclosure</a></li>
             <li><a href="#">EOA report 2025-26</a></li>
