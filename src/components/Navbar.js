@@ -3,8 +3,16 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [departmentsOpen, setDepartmentsOpen] = useState(false);
   const handleMenuToggle = () => setMenuOpen(!menuOpen);
-  const handleMenuClose = () => setMenuOpen(false);
+  const handleMenuClose = () => {
+    setMenuOpen(false);
+    setDepartmentsOpen(false);
+  };
+  const handleDepartmentsToggle = (e) => {
+    e.preventDefault();
+    setDepartmentsOpen(!departmentsOpen);
+  };
 
   return (
     <nav className="nav">
@@ -27,8 +35,8 @@ function Navbar() {
           <li><Link to="/about" onClick={handleMenuClose}>About Us</Link></li>
           <li><Link to="/admission" onClick={handleMenuClose}>Admission</Link></li>
           <li className="has-sub">
-            <a href="#departments">Departments</a>
-            <ul className="submenu">
+            <a href="#departments" onClick={handleDepartmentsToggle}>Departments</a>
+            <ul className={`submenu ${departmentsOpen ? 'open' : ''}`}>
               <li><Link to="/departments/civil" onClick={handleMenuClose}>Civil Engineering</Link></li>
               <li><Link to="/departments/cse" onClick={handleMenuClose}>Computer Science & Engineering</Link></li>
               <li><Link to="/departments/ece" onClick={handleMenuClose}>Electronics & Communication</Link></li>
