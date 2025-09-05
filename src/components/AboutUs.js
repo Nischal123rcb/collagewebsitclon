@@ -6,17 +6,19 @@ function AboutUs() {
       <div className="container">
         <h2>About Us</h2>
         <img
-  src="/carousel-1-1024x576.jpg"
-  alt="Principal SDM Polytechnic"
-  style={{
-    float: 'right',
-    margin: '0 0 2rem 2rem',
-    borderRadius: '12px',
-    boxShadow: '0 4px 24px rgba(0,0,0,0.15)',
-    maxWidth: '500px',
-    height: 'auto'
-  }}
-/>
+          src="/carousel-1-1024x576.jpg"
+          alt="Principal SDM Polytechnic"
+          style={{
+            width: '100%',
+            maxWidth: '500px',
+            height: 'auto',
+            borderRadius: '12px',
+            boxShadow: '0 4px 24px rgba(0,0,0,0.15)',
+            margin: '0 0 2rem 0',
+            display: 'block',
+            float: 'none'
+          }}
+        />
         <h3>Our Story</h3>
         <p>
           SDM Polytechnic was established in 2008 and is managed by SDM Educational Society – Ujire. The institution offers 3 years 6 Semester Diploma courses in Civil Engineering, Computer Science, Electronics & Communication Engineering and Mechanical Engineering.<br />
@@ -77,12 +79,14 @@ function AboutUs() {
           src="/new_principal.jpg"
           alt="Principal SDM Polytechnic"
           style={{
-            float: 'right',
-            margin: '0 0 2rem 2rem',
+            width: '100%',
+            maxWidth: '250px',
+            height: 'auto',
             borderRadius: '12px',
             boxShadow: '0 4px 24px rgba(0,0,0,0.15)',
-            maxWidth: '250px',
-            height: 'auto'
+            margin: '0 0 2rem 0',
+            display: 'block',
+            float: 'none'
           }}
         />
           <address>
