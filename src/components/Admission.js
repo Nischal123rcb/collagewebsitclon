@@ -57,9 +57,7 @@ function Admission() {
           </ul>
         </div>
 
-        <div style={{ marginTop: 16 }}>
-          <a href="#contact" className="btn">Enquire / Apply</a>
-        </div>
+        
       </div>
     </section>
   );

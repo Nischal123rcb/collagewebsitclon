@@ -1,56 +1,99 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Optional: Only if you're using React Router
 
 function Sections() {
   return (
     <>
+      {/* About Section */}
       <section id="about" className="section about">
-        <div className="container">
-          <h2>About the College</h2>
-          <p>
-            SDM Polytechnic was established in 2008 and offers 3-year, 6-semester Diploma
-            courses in Civil Engineering, Computer Science, Electronics & Communication, and
-            Mechanical Engineering.
-          </p>
-          <div className="cards">
-            <div className="card">
-              <h3>Unique Features</h3>
-              <p>
-                Steadfast commitment to innovation, critical thinking and global citizenship.
-              </p>
-            </div>
-            <div className="card">
-              <h3>Placement</h3>
-              <p>
-                Placement Cell enhances employability skills through pre-placement training.
-              </p>
-            </div>
-            <div className="card">
-              <h3>Library</h3>
-              <p>
-                The library plays a vital role in advancing knowledge and academic success.
-              </p>
-            </div>
-            <div className="card">
-              <h3>Alumni</h3>
-              <p>
-                Our alumni community forms an integral part of our institution's identity.
-              </p>
-            </div>
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "flex-start",
+            gap: "2rem"
+          }}
+        >
+          <div style={{ flex: "2 1 350px", minWidth: "300px" }}>
+            <h2
+              style={{
+                letterSpacing: "2px",
+                color: "#888",
+                fontWeight: "bold",
+                fontSize: "1rem"
+              }}
+            >
+              ABOUT
+            </h2>
+            <h1
+              style={{
+                fontSize: "2.5rem",
+                fontWeight: "bold",
+                marginBottom: "1.5rem"
+              }}
+            >
+              SDM Polytechnic
+            </h1>
+            <p
+              style={{
+                color: "#444",
+                fontSize: "1.15rem",
+                lineHeight: "1.8"
+              }}
+            >
+              Dharmaadhikari, Reformer, Educationist, Philosopher and Philanthropist,
+              Dr. D. Veerendra Heggade is a multidimensional personality. What truly
+              defines Dr. Heggade’s contribution is his determined and consistent
+              service to the nation. As the president of the SDME Society, he is the
+              guiding spirit and driving force behind the institution. Most
+              importantly, he has shown that one individual has the potential to change
+              and evolve himself as a social reformer in a nation of one billion. And
+              rightfully, Dr. Veerendra Heggade was awarded the second highest civilian
+              award of India, Padma Vibhushan in 2015.
+            </p>
+                      <Link to="/about" >read more</Link>
+            
+          </div>
+          <div
+            style={{
+              flex: "1 1 300px",
+              minWidth: "260px",
+              textAlign: "center"
+            }}
+          >
+                    <div style={{ flex: "1 1 350px", minWidth: "320px", textAlign: "center" }}>
+
+            <img
+              src="/carousel-1-1024x576.jpg"
+              alt="SDM Polytechnic Building"
+              style={{
+                width: "100%",
+                maxWidth: "420px",
+                borderRadius: "10px",
+                objectFit: "cover"
+              }}
+            />
+                          </div>
+
           </div>
         </div>
       </section>
 
+      {/* Campus Life Section */}
       <section id="campus" className="section campus">
         <div className="container">
           <h2>Campus Life</h2>
           <p>
-            The journey is as important as the destination. Students explore dimensions of
-            learning and experiences that are among our most unique features.
+            The journey is as important as the destination. Students explore dimensions
+            of learning and experiences that are among our most unique features.
           </p>
-          <a className="link" href="#">Read more</a>
+          
+          <Link to="/campus-life" >read more</Link>
         </div>
       </section>
 
+      {/* News Section */}
       <section id="news" className="section news">
         <div className="container">
           <h2>Latest News</h2>
@@ -58,25 +101,28 @@ function Sections() {
             <article className="news-card">
               <h3>Industrial Visit to NITK Surathkal and GTTC Baikampady</h3>
               <span className="date">August 26, 2025</span>
-              <p>The final-year Mechanical Engineering students visited NITK and GTTC.</p>
-              <a className="link" href="#">Read More</a>
+              <p>
+                The final-year Mechanical Engineering students visited NITK and GTTC.
+              </p>
             </article>
             <article className="news-card">
               <h3>Industrial Visit to Siri Gramodyoga Samsthe</h3>
               <span className="date">August 26, 2025</span>
-              <p>Final-year CSE students explored industry practices at Siri Gramodyoga.</p>
-              <a className="link" href="#">Read More</a>
+              <p>
+                Final-year CSE students explored industry practices at Siri Gramodyoga.
+              </p>
             </article>
             <article className="news-card">
               <h3>Hands-on Workshop on React JS</h3>
               <span className="date">August 23, 2025</span>
               <p>Two-day workshop on React JS and Modern Web Development.</p>
-              <a className="link" href="#">Read More</a>
+             
             </article>
           </div>
         </div>
       </section>
 
+      {/* Achievements Section */}
       <section id="achievements" className="section achievements">
         <div className="container">
           <h2>Achievements</h2>
@@ -92,5 +138,3 @@ function Sections() {
 }
 
 export default Sections;
-
-

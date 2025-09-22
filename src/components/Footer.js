@@ -1,5 +1,6 @@
 import React from 'react';
-import Gallery from './Gallery';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
 function Footer() {
   return (
     <footer id="contact" className="footer">
@@ -21,10 +22,26 @@ function Footer() {
         <div>
           <h3>Quick Links</h3>
           <ul className="list">
-            <li><a href="/gallery">Photo Gallery</a></li>
-            <li><a href="#">Student Space</a></li>
-            <li><a href="#">AICTE Mandatory Disclosure</a></li>
-            <li><a href="#">EOA report 2025-26</a></li>
+            <li><Link to="/gallery">Photo Gallery</Link></li>
+            <li><Link to="https://app.sdmes.in/EERPV3.0/EAM/login.jsp?ConsID=SDMTI">Student Space</Link></li> {/* Link to Student component */}
+            <li>
+              <a 
+                href="https://sdmpolytechnic.in/wp-content/uploads/2024/01/Mandatory-Disclosure.pdf" // Replace with actual URL
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                AICTE Mandatory Disclosure
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://sdmpolytechnic.in/wp-content/uploads/2025/03/EOA-Report-2025-2026.pdf" // Replace with actual URL
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                EOA report 2025-26
+              </a>
+            </li>
           </ul>
         </div>
       </div>
