@@ -1,0 +1,100 @@
+.nav {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #0077cc;
+}
+
+.menu .active a {
+  color: #0077cc;
+  border-bottom: 2px solid #0077cc;
+}
+
+.has-sub a {
+  cursor: pointer;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 10px 0;
+  display: none;
+  min-width: 200px;
+  z-index: 100;
+}
+
+.submenu.open {
+  display: block;
+}
+
+.submenu li {
+  padding: 5px 20px;
+}
+
+.submenu li a {
+  color: #333;
+  font-weight: 400;
+}
+
+.submenu li a:hover {
+  color: #0077cc;
+}
+
+.search-icon {
+  font-size: 1.2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.search-icon i {
+  font-family: 'Font Awesome 5 Free';
+}

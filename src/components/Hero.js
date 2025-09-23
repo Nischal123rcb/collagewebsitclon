@@ -22,10 +22,10 @@ function Hero() {
       <div
         className="hero-content"
         style={{
-          background: "rgba(0,0,0,0.5)",
+          background: "rgba(235, 225, 225, 0)",
           padding: "2rem 3rem",
           borderRadius: "12px",
-          color: "#fff",
+          color: "#ffffffff",
           textAlign: "center",
           width: "100%",
           maxWidth: "900px"
